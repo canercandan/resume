@@ -1,0 +1,135 @@
+% go to http://www.ctan.org/tex-archive/macros/latex/contrib/europecv/europecv.pdf to get more details about how to use europecv classes
+
+\documentclass[helvetica,notitle,nologo,booktabs]{europecv}
+
+% margin setter
+\usepackage[a4paper]{geometry}
+\geometry{top=0.8in, bottom=0.8in, left=0.8in, right=0.8in}
+% end margin setter
+
+% notitle remove the text : Europeen cv europass..
+% nologo remove the logo
+% french to get label texts in french
+% helvetica is the default font
+% flagBW is to draw the europeen flag
+% booktabs is a style used by the language section
+
+\usepackage{graphicx} % here the library is used to draw picture
+\usepackage[francais]{babel} % here we're using babel to have character writable in french
+
+%\ecvNoHorRule
+%\ecvExtraRowHeight{10px}
+
+% Define personal data
+\ecvname{Caner Candan}
+\ecvnationality{French}
+\ecvdateofbirth{11th september 1986}
+
+\ecvpicture[height=3cm]{images/candan_c.png}
+
+%\ecvbeforepicture{\raggedright} % draw picture at the top of resume
+
+% draw picture at the left
+\ecvbeforepicture{\raggedleft}
+\ecvafterpicture{\ecvspace{-3.5cm}}
+% end draw picture at the left
+
+\ecvaddress{26 Grande Rue, 91340 Ollainville-La-Roche}
+\ecvemail{caner@candan.fr}
+\ecvtelephone[06 72 96 68 84]{(+33) 09 54 57 13 39}
+
+\begin{document}
+
+%\fancyfoot{}
+\fancyfoot[R]{take a look at \underline{\textit{http://caner.candan.fr}}}
+
+\begin{europecv}
+
+\ecvpersonalinfo
+
+\ecvitem{\textbf{\textit{Position}}}{Engineer in High Performance Computing}
+
+\ecvitem[10pt]{}{\\&{\em I am a candidate for a PhD in HPC abroad.}}
+
+\ecvsection{Publications}
+
+\ecvitem[10pt]{\textit{February 2011}}{Parallel Divide-and-Evolve: Experiments with OpenMP on a Multicore Machine, GECCO'2011}
+\ecvitem[10pt]{\textit{October 2010}}{Hybride d'algorithme à estimation de distribution et de recuit simulé pour l'optimisation continue, ROADEF 2011}
+\ecvitem[10pt]{\textit{October 2009}}{Parallélisation de la recherche de fronts de performances pour le paramétrage de métaheuristiques, ROADEF 2010}
+
+\ecvsection{Experience}
+
+\ecvitem[10pt]{\textit{September 2009 - August 2011}}{\textbf{THALES Research \& Technology France}, Paris (Professional training contract)\\&\textit{C++ developer, parameter of metaheuristics}\\&Meta-parameter tuning for mono-objective and implementation by a framework C++ ``Evolving Objects''. Testing and checking for some correlations. Work on a Linux clustered system. Publications}
+
+\ecvitem[10pt]{\textit{January - August 2009}}{\textbf{Rotana}, Cairo, Egypt (Consultant)\\&\textit{Project Manager Online Services and Administrator Digital Archiving Department}\\&Follow several projects. Plan, conception, development, bug tracking and test. Writing the project's documentation. Developing of a rights manager for the Digital Arching Department. Follow up meeting suggested, bug fixing and testing. Maintaining the media network (SAN storage solution + Tape's Library) and troubleshooting. Teaching some guys using the media solutions}
+
+% \ecvitem[10pt]{\textit{Juillet 2007 - Janvier 2008}}{\textbf{Piwi-Est}, Sarrebourg (Consultant)\\&\textit{Développeur web}\\&Xnov, gestionnaire de cabinets de chirurgiens à l'échelle nationale.}
+
+% \ecvitem[10pt]{\textit{Août 2005 - Juillet 2007}}{\textbf{TDE-Informatique}, Mulhouse (Alternance)\\&\textit{Développeur web}\\&Réalisation de plusieurs sites web et administration du parc informatique.}
+
+\ecvsection{Education}
+
+\ecvitem[10pt]{\textit{2010 - 2011}\\\textit{\textbf{in progress}}}{\textbf{Master's degree}, High Performance Computing at UVSQ - ECP - ENS, Paris, France}
+\ecvitem[10pt]{\textit{2009 - 2011}\\\textit{\textbf{in progress}}}{\textbf{Master's degree}, Information technology expert at Epitech, Paris, France}
+\ecvitem[10pt]{\textit{2007 - 2008}}{\textbf{Bachelor's degree}, Information technology expert at Epitech, Strasbourg, France}
+\ecvitem[10pt]{\textit{2005 - 2007}}{\textbf{BTS (HND)}, Computer science technical degree, on a work-based learning, Strasbourg, France}
+
+\ecvsection{Certificates and Training}
+
+\ecvitem{8th to 11th June 2009}{Ardendo Advanced Technical Certification, Stockholm, Sweden}
+\ecvitem{18th to 21st May 2009}{IBM DB2 UDB Administration for Linux Course, Cairo, Egypt}
+\ecvitem{12th to 16th April 2009}{IBM Tivoli Storage Manager 5.3 Implementation Course, Cairo, Egypt}
+\ecvitem{2nd August 2008}{TOEIC Certificate, Strasbourg, France}
+
+\ecvsection{Skills}
+
+\ecvitem{\textit{\textbf{Advanced knowledge}}}
+
+\ecvitem{Main languages}{Assembler X86, C99, C++, Objective-C, J2EE}
+\ecvitem{Object-oriented programming}{Knowledge in design patterns and anti-patterns}
+\ecvitem{Domain-specific language}{Parser Lex, Yacc and Codeworker}
+\ecvitem{Graphical Application development}{Gtk, WxWidgets, Qt, Ncurses}
+\ecvitem{Application development 2/3D}{SDL, Irrlicht, Ogre}
+\ecvitem{Web development}{PHP, Perl, ASP, JavaScript/Ajax, Ruby, Python, Xslt}
+\ecvitem{Databases}{Oracle, DB2, PostgreSQL, MySQL, SQLite}
+\ecvitem{Parallelization and Optimization}{CUDA, MPI, OpenMP, ParadisEO}
+
+\\
+
+\ecvitem{\textit{\textbf{Other knowledges}}}{Embedded (AVR)\\&Brain-computer interface\\&Optical character recognition (Tessaract, OCRopus and Conjecture)\\&Segmentation and recognition (OpenCV)}
+
+\\
+
+\ecvitem{\textit{\textbf{Softwares and workstations}}}
+
+\ecvitem{Operating System}{*BSD, GNU/Linux, Solaris}
+\ecvitem{Editors}{Emacs, Eclipse, Netbeans}
+\ecvitem{Compute and Modelize}{GNU Octave, Scilab, Gnuplot}
+\ecvitem{SCM}{Subversion, CVS, Bazaar, Mercurial, Git}
+\ecvitem{Bug tracker}{Trac, FlySpray, Bugzilla}
+\ecvitem{Automatic programming}{ArgoUML, KDevelop, StarUML, Clarion, Dia, Umbrello}
+\ecvitem{Software documentation}{Doxygen, JavaDoc, LaTex, DokuWiki}
+
+\ecvsection{Languages}
+
+\ecvitem{English}{good knowledge, TOEIC August 2008 (scoring 790)}
+\ecvitem{Turkish and French}{native speaker}
+\ecvitem{German and Arabic}{notions}
+
+%\ecvlanguageheader{(*)}
+%\ecvlanguage[10pt]{Anglais (TOEIC)}{\ecvCOne}{\ecvCOne}{\ecvCOne}{\ecvCTwo}{\ecvCTwo}
+%\ecvlanguage[10pt]{Allemand}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
+%\ecvlastlanguage[10pt]{Arabe}{\ecvBOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
+%\ecvlanguagefooter{(*)}
+
+\ecvsection{Interests}
+
+\ecvitem{Sports}{karate, football, basketball and bike}
+\ecvitem{Hobbies}{energy-efficient technologies, history, culture, foreign languages, travel, cinema, music and reading.}
+
+\\
+
+\ecvitem{\textbf{References}}{Available upon request}
+
+\end{europecv}
+\end{document}

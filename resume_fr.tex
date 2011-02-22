@@ -1,0 +1,126 @@
+% go to http://www.ctan.org/tex-archive/macros/latex/contrib/europecv/europecv.pdf to get more details about how to use europecv classes
+
+\documentclass[helvetica,notitle,nologo,french,booktabs]{europecv}
+
+% margin setter
+\usepackage[a4paper]{geometry}
+\geometry{top=0.8in, bottom=0.8in, left=0.8in, right=0.8in}
+% end margin setter
+
+% notitle remove the text : Europeen cv europass..
+% nologo remove the logo
+% french to get label texts in french
+% helvetica is the default font
+% flagBW is to draw the europeen flag
+% booktabs is a style used by the language section
+
+\usepackage{graphicx} % here the library is used to draw picture
+\usepackage[francais]{babel} % here we're using babel to have character writable in french
+
+%\ecvNoHorRule
+%\ecvExtraRowHeight{10px}
+
+% Define personal data
+\ecvname{Candan, Caner}
+\ecvnationality{Français}
+\ecvdateofbirth{11 septembre 1986}
+
+\ecvpicture[height=3cm]{images/candan_c.png}
+
+%\ecvbeforepicture{\raggedright} % draw picture at the top of resume
+
+% draw picture at the left
+\ecvbeforepicture{\raggedleft}
+\ecvafterpicture{\ecvspace{-3.5cm}}
+% end draw picture at the left
+
+\ecvaddress{26 Grande Rue, 91340 Ollainville-La-Roche}
+\ecvemail{caner@candan.fr}
+\ecvtelephone[06 72 96 68 84]{(+33) 09 54 57 13 39}
+
+\begin{document}
+
+%\fancyfoot{}
+\fancyfoot[R]{voir aussi \underline{\textit{http://caner.candan.fr}}}
+
+\begin{europecv}
+
+\ecvpersonalinfo
+
+\ecvitem{\textbf{\textit{Titre}}}{Ingénieur Epitech; Anglais bilingue}
+
+\ecvsection{Diplômes}
+
+\ecvitem[10pt]{\textit{2009 - 2011}\\\textit{\textbf{en cours}}}{\textbf{Master 2 (Bac+5)}, Expert en technologie de l’information à Epitech, Paris}
+\ecvitem[10pt]{\textit{2007 - 2008}}{\textbf{Bachelor (Bac+3)}, Expert en technologie de l’information à Epitech, Strasbourg}
+\ecvitem[10pt]{\textit{2005 - 2007}}{\textbf{BTS (Bac+2)}, Informatique de gestion, Strasbourg}
+
+\ecvsection{Certifications et Formations}
+
+\ecvitem{8 au 11 juin 2009}{Ardendo Advanced Technical Certification, Stockholm, Suède}
+\ecvitem{18 au 21 mai 2009}{Formation IBM DB2 UDB Administration for Linux, Le Caire, Égypte}
+\ecvitem{12 au 16 avril 2009}{Formation IBM Tivoli Storage Manager 5.3 Implementation, Le Caire, Égypte}
+\ecvitem{2 août 2008}{Certification TOEIC, Strasbourg}
+
+\ecvsection{Expériences professionnelles}
+
+\ecvitem[10pt]{\textit{Septembre 2009 - Août 2011}}{\textbf{THALES Research \& Technology France}, Paris (Contrat de professionnalisation)\\&\textit{Développeur C++, paramétrage de méta-heuristiques}\\&Adaptation d’une méthode de paramétrage existante au multi-objectif et sa mise en oeuvre via le framework C++ open-source “Evolving Objects”.  Jeu de test et détermination des corrélations vérifiées. Travail sur un cluster sous Linux.\\&Publications}
+
+\ecvitem[10pt]{\textit{Janvier - Août 2009}}{\textbf{Rotana}, Le Caire, Égypte (Consultant)\\&\textit{Chef de projet pour les services en ligne et administrateur pour le département d'archivage numérique}\\&Suivi de plusieurs projets. Planification, conception, développement, débogues et tests. Rédaction de documentation de projet. Développement d'une application de contrôle de droits pour le département d'archivage numérique.}
+
+\ecvitem[10pt]{\textit{Juillet 2007 - Janvier 2008}}{\textbf{Piwi-Est}, Sarrebourg (Consultant)\\&\textit{Développeur web}\\&Xnov, gestionnaire de cabinets de chirurgiens à l'échelle nationale.}
+
+\ecvitem[10pt]{\textit{Août 2005 - Juillet 2007}}{\textbf{TDE-Informatique}, Mulhouse (Alternance)\\&\textit{Développeur web}\\&Réalisation de plusieurs sites web et administration du parc informatique.}
+
+\ecvsection{Compétences et intérêts personnels}
+
+\ecvitem{\textit{\textbf{Connaissances avancées}}}
+
+\ecvitem{Langages principaux}{Assembleur X86 (Nasm-Masm), Langage C, C++, Objectif-C, C\#, VB6, Java SE/ME}
+\ecvitem{Programmation orientée objet}{Connaissance en patron de conception et antipattern}
+\ecvitem{Langages dédiés (DSL)}{Analyseurs Lex, Yacc et Codeworker}
+\ecvitem{Application graphique}{Win32 API, Gtk, WxWidgets, Qt, Ncurses}
+\ecvitem{Application 2/3D}{DirectX/OpenGL, SDL, Irrlicht, Ogre}
+\ecvitem{Application Web et interprétée}{PHP, Perl, ASP, JavaScript, Ajax, Ruby, Python, Xslt}
+\ecvitem{Bases de données}{Oracle, DB2, SqlServer, PostgreSQL, MySQL, SQLite}
+\ecvitem{Parallélisation et Optimisation}{MPI, ParadisEO}
+
+\\
+
+\ecvitem{\textit{\textbf{Autres connaissances}}}{Embarquée (AVR)\\&Interface neuronale directe (BCI)\\&Reconnaissance optique de caractère (OCR: Tessaract, OCRopus et Conjecture)\\&Segmentation d'image (OpenCV)}
+
+\\
+
+\ecvitem{\textit{\textbf{Logiciels et environnements de travail}}}
+
+\ecvitem{Environnements}{Windows, MacOS, *BSD, Linux, Solaris}
+\ecvitem{Éditeurs}{Emacs, Vi[m], Visual Studio, Eclipse, Netbeans, WinAVR, TextMate, MASM32, Kile}
+\ecvitem{Calcul et Modélisation}{GNU Octave, Scilab, Gnuplot}
+\ecvitem{Contrôleurs de codes}{Subversion, CVS, Bazaar, Git}
+\ecvitem{Bug tracker}{Trac, FlySpray, Bugzilla}
+\ecvitem{Atelier de génie logiciel}{ArgoUML, KDevelop, StarUML, Mega, Windev, Clarion, MS Visio, Dia, Umbrello, PowerAMC}
+\ecvitem{Documentation logicielle}{Doxygen, JavaDoc, LaTex, DokuWiki}
+
+\ecvsection{Langues étrangères}
+
+\ecvitem{Anglais}{lu, écrit et parlé (niveau TOEIC)}
+\ecvitem{Turc}{langue maternelle}
+\ecvitem{Allemand et Arabe}{notions}
+
+%\ecvlanguageheader{(*)}
+%\ecvlanguage[10pt]{Anglais (TOEIC)}{\ecvCOne}{\ecvCOne}{\ecvCOne}{\ecvCTwo}{\ecvCTwo}
+%\ecvlanguage[10pt]{Allemand}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
+%\ecvlastlanguage[10pt]{Arabe}{\ecvBOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
+%\ecvlanguagefooter{(*)}
+
+\ecvsection{Centres d'intérêts}
+
+\ecvitem{Sports}{karaté, football, basket-balls et vélo}
+\ecvitem{Loisirs}{veille technologique, histoire, cultures et langues étrangères, voyages, cinéma, musique et lecture.}
+
+\\
+
+\ecvitem{\textbf{Références}}{Disponible sur demande}
+
+\end{europecv}
+\end{document}
