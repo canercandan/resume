@@ -1,11 +1,14 @@
-% go to http://www.ctan.org/tex-archive/macros/latex/contrib/europecv/europecv.pdf to get more details about how to use europecv classes
+% Permission is granted to copy, distribute and/or modify this document
+% under the terms of the GNU Free Documentation License, Version 1.3
+% or any later version published by the Free Software Foundation;
+% with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+% A copy of the license is included in the section entitled "GNU
+% Free Documentation License".
+%
+% Authors:
+% Caner Candan <caner@candan.fr>, http://caner.candan.fr
 
-\documentclass[helvetica,notitle,nologo,booktabs]{europecv}
-
-% margin setter
-\usepackage[a4paper]{geometry}
-\geometry{top=0.8in, bottom=0.8in, left=0.8in, right=0.8in}
-% end margin setter
+% go to http://www.ctan.org/tex-archive/macros/latex/contrib/europecv/europecv.pdf to get more details and to know how to use europecv template
 
 % notitle remove the text : Europeen cv europass..
 % nologo remove the logo
@@ -14,33 +17,20 @@
 % flagBW is to draw the europeen flag
 % booktabs is a style used by the language section
 
-\usepackage{graphicx} % here the library is used to draw picture
-\usepackage[francais]{babel} % here we're using babel to have character writable in french
+\documentclass[helvetica,notitle,nologo,booktabs]{europecv}
 
-%\ecvNoHorRule
-%\ecvExtraRowHeight{10px}
+\usepackage[french]{myresume}
 
 % Define personal data
 \ecvname{Caner Candan}
 \ecvnationality{French}
 \ecvdateofbirth{11th september 1986}
-
-\ecvpicture[height=3cm]{images/candan_c.png}
-
-%\ecvbeforepicture{\raggedright} % draw picture at the top of resume
-
-% draw picture at the left
-\ecvbeforepicture{\raggedleft}
-\ecvafterpicture{\ecvspace{-3.5cm}}
-% end draw picture at the left
-
 \ecvaddress{26 Grande Rue, 91340 Ollainville-La-Roche}
 \ecvemail{caner@candan.fr}
 \ecvtelephone[06 72 96 68 84]{(+33) 09 54 57 13 39}
 
 \begin{document}
 
-%\fancyfoot{}
 \fancyfoot[R]{take a look at \underline{\textit{http://caner.candan.fr}}}
 
 \begin{europecv}
@@ -49,32 +39,34 @@
 
 \ecvitem{\textbf{\textit{Position}}}{Research engineer in Computer Science}
 
-%\ecvitem[10pt]{}{\\&{\em I am a candidate for a PhD in HPC abroad.}}
+%\myecvitem{}{\\&{\em I am a candidate for a PhD in HPC abroad.}}
 
-\ecvitem[10pt]{}{\\&{\em As my work at Thales will end on 31st August 2011, I am a candidate for a PhD in computer science related with computational intelligence (combinatorial optimization, stochastic algorithms, EA, metaheuristics, ...) and high performance computing (shared, distributed, devices, evaluation, ...). And in favour of mobility, I am interested to have an experience abroad.}}
+\myecvitem{}{\\&{\em As my work at Thales will end on 31st August 2011, I am a candidate for a PhD in computer science related with computational intelligence (combinatorial optimization, stochastic algorithms, EA, metaheuristics, ...) and high performance computing (shared, distributed, devices, evaluation, ...). And in favour of mobility, I am interested to have an experience abroad.}}
 
 \ecvsection{Publications}
 
-\ecvitem[10pt]{\textit{February 2011}}{Parallel Divide-and-Evolve: Experiments with OpenMP on a Multicore Machine, GECCO'2011}
-\ecvitem[10pt]{\textit{October 2010}}{Hybride d'algorithme à estimation de distribution et de recuit simulé pour l'optimisation continue, ROADEF 2011}
-\ecvitem[10pt]{\textit{October 2009}}{Parallélisation de la recherche de fronts de performances pour le paramétrage de métaheuristiques, ROADEF 2010}
+\myecvitem{\textit{February 2011}}{Parallel Divide-and-Evolve: Experiments with OpenMP on a Multicore Machine, GECCO'2011}
+\myecvitem{\textit{October 2010}}{Hybride d'algorithme à estimation de distribution et de recuit simulé pour l'optimisation continue, ROADEF 2011}
+\myecvitem{\textit{October 2009}}{Parallélisation de la recherche de fronts de performances pour le paramétrage de métaheuristiques, ROADEF 2010}
+
+\ecvsection{Conferencies}
 
 \ecvsection{Experience}
 
-\ecvitem[10pt]{\textit{September 2009 - August 2011}}{\textbf{THALES Research \& Technology France}, Paris (Professional training contract)\\&\textit{C++ developer, parameter of metaheuristics}\\&Meta-parameter tuning for mono-objective and implementation by a framework C++ ``Evolving Objects''. Testing and checking for some correlations. Work on a Linux clustered system. Publications}
+\myecvitem{\textit{September 2009 - August 2011}}{\textbf{THALES Research \& Technology France}, Paris (Professional training contract)\\&\textit{C++ developer, parameter of metaheuristics}\\&Meta-parameter tuning for mono-objective and implementation by a framework C++ ``Evolving Objects''. Testing and checking for some correlations. Work on a Linux clustered system. Publications}
 
-\ecvitem[10pt]{\textit{January - August 2009}}{\textbf{Rotana}, Cairo, Egypt (Consultant)\\&\textit{Project Manager Online Services and Administrator Digital Archiving Department}\\&Follow several projects. Plan, conception, development, bug tracking and test. Writing the project's documentation. Developing of a rights manager for the Digital Arching Department. Follow up meeting suggested, bug fixing and testing. Maintaining the media network (SAN storage solution + Tape's Library) and troubleshooting. Teaching some guys using the media solutions}
+\myecvitem{\textit{January - August 2009}}{\textbf{Rotana}, Cairo, Egypt (Consultant)\\&\textit{Project Manager Online Services and Administrator Digital Archiving Department}\\&Follow several projects. Plan, conception, development, bug tracking and test. Writing the project's documentation. Developing of a rights manager for the Digital Arching Department. Follow up meeting suggested, bug fixing and testing. Maintaining the media network (SAN storage solution + Tape's Library) and troubleshooting. Teaching some guys using the media solutions}
 
-% \ecvitem[10pt]{\textit{Juillet 2007 - Janvier 2008}}{\textbf{Piwi-Est}, Sarrebourg (Consultant)\\&\textit{Développeur web}\\&Xnov, gestionnaire de cabinets de chirurgiens à l'échelle nationale.}
+% \myecvitem{\textit{Juillet 2007 - Janvier 2008}}{\textbf{Piwi-Est}, Sarrebourg (Consultant)\\&\textit{Développeur web}\\&Xnov, gestionnaire de cabinets de chirurgiens à l'échelle nationale.}
 
-% \ecvitem[10pt]{\textit{Août 2005 - Juillet 2007}}{\textbf{TDE-Informatique}, Mulhouse (Alternance)\\&\textit{Développeur web}\\&Réalisation de plusieurs sites web et administration du parc informatique.}
+% \myecvitem{\textit{Août 2005 - Juillet 2007}}{\textbf{TDE-Informatique}, Mulhouse (Alternance)\\&\textit{Développeur web}\\&Réalisation de plusieurs sites web et administration du parc informatique.}
 
 \ecvsection{Education}
 
-\ecvitem[10pt]{\textit{2010 - 2011}\\\textit{\textbf{in progress}}}{\textbf{Master's degree}, High Performance Computing at UVSQ - ECP - ENS, Paris, France}
-\ecvitem[10pt]{\textit{2009 - 2011}\\\textit{\textbf{in progress}}}{\textbf{Master's degree}, Information technology expert at Epitech, Paris, France}
-\ecvitem[10pt]{\textit{2007 - 2008}}{\textbf{Bachelor's degree}, Information technology expert at Epitech, Strasbourg, France}
-\ecvitem[10pt]{\textit{2005 - 2007}}{\textbf{BTS (HND)}, Computer science technical degree, on a work-based learning, Strasbourg, France}
+\myecvitem{\textit{2010 - 2011}\\\textit{\textbf{in progress}}}{\textbf{Master's degree}, High Performance Computing at UVSQ - ECP - ENS, Paris, France}
+\myecvitem{\textit{2009 - 2011}\\\textit{\textbf{in progress}}}{\textbf{Master's degree}, Information technology expert at Epitech, Paris, France}
+\myecvitem{\textit{2007 - 2008}}{\textbf{Bachelor's degree}, Information technology expert at Epitech, Strasbourg, France}
+\myecvitem{\textit{2005 - 2007}}{\textbf{BTS (HND)}, Computer science technical degree, on a work-based learning, Strasbourg, France}
 
 \ecvsection{Certificates and Training}
 
