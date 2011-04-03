@@ -17,116 +17,191 @@
 % flagBW is to draw the europeen flag
 % booktabs is a style used by the language section
 
-\documentclass[helvetica,notitle,nologo,booktabs]{europecv}
-
-\usepackage[french]{resume}
-
 % Define personal data
+
+\lang{
 \ecvname{Caner Candan}
 \ecvnationality{French}
 \ecvdateofbirth{11th september 1986}
-\ecvaddress{\myaddress}
-\ecvemail{\myemail}
-\ecvtelephone[\mymobile]{\myphone}
+}{
+\ecvname{Candan, Caner}
+\ecvnationality{Français}
+\ecvdateofbirth{11 septembre 1986}
+}
+
+\ecvaddress{26 Grande Rue, 91340 Ollainville-La-Roche\lang{, France}{}}
+\ecvemail{caner@candan.fr}
+\ecvtelephone[\lang{+33 6}{06} 72 96 68 84]{\lang{+33 9}{09} 54 57 13 39}
 
 \begin{document}
 
-\fancyfoot[R]{take a look at \underline{\textit{http://caner.candan.fr}}}
+\fancyfoot[R]{\lang{take a look at}{voir aussi} \underline{\textit{http://caner.candan.fr}}}
 
 \begin{europecv}
 
 \ecvpersonalinfo
 
-\ecvitem{\textbf{\textit{Position}}}{Research engineer in Computer Science}
+\ecvitem{\textbf{\textit{\lang{Position}{Titre}}}}{\lang{Research engineer in Computer Science}{Ingénieur de recherche; Anglais bilingue}}
 
 %\myecvitem{}{\\&{\em I am a candidate for a PhD in HPC abroad.}}
 
-\myecvtext{As my work at Thales will end on 31st August 2011, I am a candidate for a PhD in computer science related with computational intelligence (combinatorial optimization, stochastic algorithms, EA, metaheuristics, ...) and high performance computing (shared, distributed, devices, evaluation, ...). And in favour of mobility, I am interested to have an experience abroad.}
+% \myecvtext{
+% \lang{
+% As my work at Thales will end on 31st August 2011, I am a candidate for a PhD in computer science related with computational intelligence (combinatorial optimization, stochastic algorithms, EA, metaheuristics, ...) and high performance computing (shared, distributed, devices, evaluation, ...). And in favour of mobility, I am interested to have an experience abroad.
+% }{
+% Mon stage à Thales prenant fin au 31 août 2011, je recherche dès à présent une thèse couvrant les domaines de la recherche intelligente (optimisation combinatoire, algorithme stochastique, EA, métaheuristiques, ...) et du calcul à haute performance (HPC) (partagé, distribué, accélérateurs, évaluation de performance, ...). Je suis ouvert à la mobilité et notamment pour une expérience à l'étranger.
+% }
+% }
 
 \ecvsection{Publications}
 
-\myecvitemsep{February 2011}{\paperGeccoEleven}
-\myecvitemsep{October 2010}{\paperRoadefEleven}
-\myecvitemsep{October 2009}{\paperRoadefTen}
+\myecvitemsep{\lang{February 2011}{Février 2011}}{Parallel Divide-and-Evolve: Experiments with OpenMP on a Multicore Machine, GECCO'2011}
+\myecvitemsep{\lang{October 2010}{Octobre 2010}}{Hybride d'algorithme à estimation de distribution et de recuit simulé pour l'optimisation continue, ROADEF 2011}
+\myecvitemsep{\lang{October 2009}{Octobre 2009}}{Parallélisation de la recherche de fronts de performances pour le paramétrage de métaheuristiques, ROADEF 2010}
 
 %\ecvsection{Conferencies}
 
-\ecvsection{Experience}
+\ecvsection{\lang{Experience}{Expériences professionnelles}}
 
-\myecvitemsep{September 2009 - August 2011}{\textbf{THALES Research \& Technology France}, Paris (Professional training contract)\\&\textit{C++ developer, parameter of metaheuristics}\\&Meta-parameter tuning for mono-objective and implementation by a framework C++ ``Evolving Objects''. Testing and checking for some correlations. Work on a Linux clustered system. Publications}
+\myecvitemsep{\lang{September 2009 - August 2011}{Septembre 2009 - Août 2011}}{
+\lang{
+\textbf{THALES Research \& Technology France}, Paris (Professional training contract)\\&\textit{C++ developer, parameter of metaheuristics}\\&Meta-parameter tuning for mono-objective and implementation by a framework C++ ``Evolving Objects''. Testing and checking for some correlations. Work on a Linux clustered system. Publications\\& % needed to avoid an error
+}{
+\textbf{THALES Research \& Technology France}, Paris (Contrat de professionnalisation)\\&\textit{Développeur C++, paramétrage de méta-heuristiques}\\&Adaptation d’une méthode de paramétrage existante au multi-objectif et sa mise en oeuvre via le framework C++ open-source ``Evolving Objects''.  Jeu de test et détermination des corrélations vérifiées. Travail sur un cluster sous Linux.\\&Publications
+}
+}
 
-\myecvitemsep{January - August 2009}{\textbf{Rotana}, Cairo, Egypt (Consultant)\\&\textit{Project Manager Online Services and Digital Archiving Department Administrator}\\&Follow several projects. Plan, conception, development, bug tracking and test. Writing the project's documentation. Developing of a rights manager for the Digital Arching Department. Follow up meeting suggested, bug fixing and testing. Maintaining the media network (SAN storage solution + Tape's Library) and troubleshooting. Teaching some guys using the media solutions}
+\myecvitemsep{\lang{January - August 2009}{Janvier - Août 2009}}{
+\lang{
+\textbf{Rotana}, Cairo, Egypt (Consultant)\\&\textit{Project Manager Online Services and Digital Archiving Department Administrator}\\&Follow several projects. Plan, conception, development, bug tracking and test. Writing the project's documentation. Developing of a rights manager for the Digital Arching Department. Follow up meeting suggested, bug fixing and testing. Maintaining the media network (SAN storage solution + Tape's Library) and troubleshooting. Teaching some guys using the media solutions.\\& % needed to avoid an error
+}{
+\textbf{Rotana}, Le Caire, Égypte (Consultant)\\&\textit{Chef de projet pour les services en ligne et administrateur pour le département d'archivage numérique}\\&Suivi de plusieurs projets. Planification, conception, développement, débogues et tests. Rédaction de documentation de projet. Développement d'une application de contrôle de droits pour le département d'archivage numérique.
+}
+}
 
 % \myecvitemsep{Juillet 2007 - Janvier 2008}{\textbf{Piwi-Est}, Sarrebourg (Consultant)\\&\textit{Développeur web}\\&Xnov, gestionnaire de cabinets de chirurgiens à l'échelle nationale.}
 
 % \myecvitemsep{Août 2005 - Juillet 2007}{\textbf{TDE-Informatique}, Mulhouse (Alternance)\\&\textit{Développeur web}\\&Réalisation de plusieurs sites web et administration du parc informatique.}
 
-\ecvsection{Education}
+\ecvsection{\lang{Education}{Diplômes}}
 
-\myecvitemsep{2010 - 2011\\\textbf{in progress}}{\textbf{Master's degree}, High Performance Computing at UVSQ - ECP - ENS, Paris, France}
+\myecvitemsep{2010 - 2011\\\textbf{\lang{in progress}{en cours}}}{
+\lang{
+\textbf{Master's degree}, High Performance Computing at UVSQ - ECP - ENS, Paris, France
+}{
+\textbf{Master 2}, Calcul Haute Performance à UVSQ - ECP - ENS, Paris, France
+}
+}
 
-\myecvitemsep{2009 - 2011\\\textbf{in progress}}{\textbf{Master's degree}, Information technology expert at Epitech, Paris, France}
+\myecvitemsep{2009 - 2011\\\textbf{\lang{in progress}{en cours}}}{
+\lang{
+\textbf{Master's degree}, Information technology expert at Epitech, Paris, France
+}{
+\textbf{Master 2}, Expert en technologie de l’information à Epitech, Paris
+}
+}
 
-\myecvitemsep{2007 - 2008}{\textbf{Bachelor's degree}, Information technology expert at Epitech, Strasbourg, France}
+\myecvitemsep{2007 - 2008}{
+\lang{
+\textbf{Bachelor's degree}, Information technology expert at Epitech, Strasbourg, France
+}{
+\textbf{Bachelor (Bac+3)}, Expert en technologie de l’information à Epitech, Strasbourg
+}
+}
 
-\myecvitemsep{2005 - 2007}{\textbf{BTS (HND)}, Computer science technical degree, on a work-based learning, Strasbourg, France}
+\myecvitemsep{2005 - 2007}{
+\lang{
+\textbf{BTS (HND)}, Computer science technical degree, on a work-based learning, Strasbourg, France
+}{
+\textbf{BTS (Bac+2)}, Informatique de gestion, Strasbourg
+}
+}
 
-\ecvsection{Certificates and Training}
+\ecvsection{\lang{Certificates and Training}{Certifications et Formations}}
 
+\lang{
 \ecvitem{8th to 11th June 2009}{Ardendo Advanced Technical Certification, Stockholm, Sweden}
+}{
+\ecvitem{8 au 11 juin 2009}{Ardendo Advanced Technical Certification, Stockholm, Suède}
+}
+
+\lang{
 \ecvitem{18th to 21st May 2009}{IBM DB2 UDB Administration for Linux Course, Cairo, Egypt}
+}{
+\ecvitem{18 au 21 mai 2009}{Formation IBM DB2 UDB Administration for Linux, Le Caire, Égypte}
+}
+
+\lang{
 \ecvitem{12th to 16th April 2009}{IBM Tivoli Storage Manager 5.3 Implementation Course, Cairo, Egypt}
+}{
+\ecvitem{12 au 16 avril 2009}{Formation IBM Tivoli Storage Manager 5.3 Implementation, Le Caire, Égypte}
+}
+
+\lang{
 \ecvitem{2nd August 2008}{TOEIC Certificate, Strasbourg, France}
+}{
+\ecvitem{2 août 2008}{Certification TOEIC, Strasbourg}
+}
 
-\ecvsection{Skills}
+\ecvsection{\lang{Skills}{Compétences et intérêts personnels}}
 
-\myecvsubsection{Advanced knowledge}
+\myecvsubsection{\lang{Advanced knowledge}{Connaissances avancées}}
 
-\ecvitem{Main languages}{Assembler X86, C99, C++, Objective-C, J2EE}
-\ecvitem{Object-oriented programming}{Knowledge in design patterns and anti-patterns}
-\ecvitem{Domain-specific language}{Parser Lex, Yacc and Codeworker}
-\ecvitem{Graphical Application development}{Gtk, WxWidgets, Qt, Ncurses}
-\ecvitem{Application development 2/3D}{SDL, Irrlicht, Ogre}
-\ecvitem{Web development}{PHP, Perl, ASP, JavaScript/Ajax, Ruby, Python, Xslt}
-\ecvitem{Databases}{Oracle, DB2, PostgreSQL, MySQL, SQLite}
-\ecvitem{Parallelization and Optimization}{CUDA, MPI, OpenMP, ParadisEO}
+\ecvitem{\lang{Main languages}{Langages principaux}}{Assembler X86, C99, C++, Objective-C, J2EE}
+\ecvitem{\lang{Object-oriented programming}{Programmation orientée objet}}{\lang{Knowledge in design patterns and anti-patterns}{Connaissance en patron de conception et antipattern}}
+\ecvitem{\lang{Domain-specific language}{Langages dédiés (DSL)}}{\lang{Parser}{Analyseurs} Lex, Yacc, Codeworker}
+\ecvitem{\lang{Graphical Application development}{Application graphique}}{Gtk, WxWidgets, Qt, Ncurses}
+\ecvitem{\lang{Application development 2/3D}{Application 2/3D}}{SDL, Irrlicht, Ogre}
+\ecvitem{\lang{Web development}{Application Web et interprétée}}{PHP, Perl, ASP, JavaScript/Ajax, Ruby, Python, Xslt}
+\ecvitem{\lang{Databases}{Bases de données}}{Oracle, DB2, PostgreSQL, MySQL, SQLite}
+\ecvitem{\lang{Parallelization and Optimization}{Parallélisation et Optimisation}}{CUDA, MPI, OpenMP, ParadisEO}
 
 \\
 
-\myecvsubsection{Other knowledges}{Embedded (AVR)\\&Brain-computer interface\\&Optical character recognition (Tessaract, OCRopus and Conjecture)\\&Segmentation and recognition (OpenCV)}
+\myecvsubsection{\lang{Other knowledges}{Autres connaissances}}{
+\lang{Embedded}{Système embarqué} (AVR)\\&
+\lang{Brain-computer interface}{Interface neuronale directe (BCI)}\\&
+\lang{Optical character recognition}{Reconnaissance optique de caractère} (Tessaract, OCRopus, Conjecture)\\&
+\lang{Segmentation and recognition}{Segmentation d'image} (OpenCV)
+}
 
-\\
+\myecvsubsection{\lang{Softwares and workstations}{Logiciels et environnements de travail}}
 
-\myecvsubsection{Softwares and workstations}
-
-\ecvitem{Operating System}{*BSD, GNU/Linux, Solaris}
-\ecvitem{Editors}{Emacs, Eclipse, Netbeans}
-\ecvitem{Compute and Modelize}{GNU Octave, Scilab, Gnuplot}
-\ecvitem{SCM}{Subversion, CVS, Bazaar, Mercurial, Git}
+\ecvitem{\lang{Operating System}{Environnements}}{*BSD, GNU/Linux, Solaris}
+\ecvitem{\lang{Editors}{Éditeurs}}{Emacs, Eclipse, Netbeans}
+\ecvitem{\lang{Compute and Modelize}{Calcul et Modélisation}}{GNU Octave, Scilab, Gnuplot}
+\ecvitem{\lang{SCM}{Contrôleurs de codes}}{Subversion, CVS, Bazaar, Mercurial, Git}
 \ecvitem{Bug tracker}{Trac, FlySpray, Bugzilla}
-\ecvitem{Automatic programming}{ArgoUML, KDevelop, StarUML, Clarion, Dia, Umbrello}
-\ecvitem{Software documentation}{Doxygen, JavaDoc, LaTex, DokuWiki}
+\ecvitem{\lang{Automatic programming}{Atelier de génie logiciel}}{ArgoUML, KDevelop, StarUML, Clarion, Dia, Umbrello}
+\ecvitem{\lang{Software documentation}{Documentation logicielle}}{Doxygen, JavaDoc, LaTex, DokuWiki}
 
-\ecvsection{Languages}
+\ecvsection{\lang{Languages}{Langues étrangères}}
 
+\lang{
 \ecvitem{English}{good knowledge, TOEIC August 2008 (scoring 790)}
 \ecvitem{Turkish and French}{native speaker}
 \ecvitem{German and Arabic}{notions}
+}{
+\ecvitem{Anglais}{lu, écrit et parlé (niveau TOEIC)}
+\ecvitem{Turc}{langue maternelle}
+\ecvitem{Allemand et Arabe}{notions}
+}
 
-%\ecvlanguageheader{(*)}
-%\ecvlanguage[10pt]{Anglais (TOEIC)}{\ecvCOne}{\ecvCOne}{\ecvCOne}{\ecvCTwo}{\ecvCTwo}
-%\ecvlanguage[10pt]{Allemand}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
-%\ecvlastlanguage[10pt]{Arabe}{\ecvBOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}{\ecvAOne}
-%\ecvlanguagefooter{(*)}
+\ecvsection{\lang{Interests}{Centres d'intérêts}}
 
-\ecvsection{Interests}
-
+\lang{
 \ecvitem{Sports}{karate, football, basketball and bike}
 \ecvitem{Hobbies}{energy-efficient technologies, history, culture, foreign languages, travel, cinema, music and reading.}
+}{
+\ecvitem{Sports}{karaté, football, basket-balls et vélo}
+\ecvitem{Loisirs}{veille technologique, histoire, cultures et langues étrangères, voyages, cinéma, musique et lecture.}
+}
 
-\\
-
+\lang{
 \ecvitem{\textbf{References}}{Available upon request}
+}{
+\ecvitem{\textbf{Références}}{Disponible sur demande}
+}
 
 \end{europecv}
 \end{document}
