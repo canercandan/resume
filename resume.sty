@@ -13,6 +13,11 @@
 \newif\if@fr            \@frfalse
 \newif\if@de            \@defalse
 
+% for multicontexts support
+\newif\if@sci           \@scifalse
+\newif\if@eng           \@engfalse
+
+% others
 \newif\if@french        \@frenchfalse
 \newif\if@url           \@urlfalse
 \newif\if@dot           \@dotfalse
@@ -22,6 +27,11 @@
 \DeclareOption{fr}{\@frtrue}
 \DeclareOption{de}{\@detrue}
 
+% for multicontexts support
+\DeclareOption{sci}{\@scitrue}
+\DeclareOption{eng}{\@engtrue}
+
+% others
 \DeclareOption{french}{\@frenchtrue}
 \DeclareOption{url}{\@urltrue}
 \DeclareOption{dot}{\@dottrue}
@@ -56,12 +66,17 @@
 \fi
 
 % multilanguages support
-
 \newcommand{\lang}[2]
 {
   \if@en #1 \fi
   \if@fr #2 \fi
-  %\if@de #3 \fi
+}
+
+% multicontexts support
+\newcommand{\context}[2]
+{
+  \if@sci #1 \fi
+  \if@eng #2 \fi
 }
 
 %\ecvNoHorRule
