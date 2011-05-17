@@ -10,18 +10,23 @@
 %  G. Marcou, A. Pereira                          02/02/2004 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{CV}
+
 %% Initializations
-% on place le coin en haut a gauche a l'aide de \hoffset et \voffset
+% we set the top-left corner in using \hoffset and \voffset
+% by default, the reference point is
 % par defaut, le point de reference est decale par TeX de 1in
 \setlength{\hoffset}{-1in}
 \setlength{\voffset}{-1in}
+
 % taille des bordures de chaque cote de la feuille
 % placement du point de reference de x cm a droite et de y cm
 % au-dessous du coin haut,gauche de la feuille
 \addtolength{\hoffset}{1.5cm}
 \addtolength{\voffset}{1cm}
+
 % on initialise la place occupee par le texte
 % ces variables seront modifiees a la fin pour que
 % le texte soit centre et que ca tombe juste
@@ -40,15 +45,18 @@
 %  en recto/verso, seul oddside est utilise pour les pages a droite
 %  et seul evenside est utilise pour les pages a gauche
 \setlength{\oddsidemargin}{-0.75cm}
+
 % marge pour les notes
 \setlength{\marginparsep}{0cm}
 \setlength{\marginparwidth}{0cm}
 \setlength{\marginparpush}{0cm}
+
 % calcul de la largeur du texte page droite
 \addtolength{\textwidth}{-\oddsidemargin}
 \addtolength{\textwidth}{-\marginparsep}
 \addtolength{\textwidth}{-\marginparwidth}
 \addtolength{\textwidth}{-\marginparpush}
+
 % calcul de \evensidemargin (page gauche)
 %  on trouve 0cm car on a calcule \textwidth pour qu'il prenne
 %  toute la largeur restante sur la page droite
@@ -79,24 +87,24 @@
 \renewcommand\updefault{n}
 
 \renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {0.1ex}%
-                                   {\normalfont\Large\bfseries}}
+  {-3.5ex \@plus -1ex \@minus -.2ex}%
+  {0.1ex}%
+  {\normalfont\Large\bfseries}}
 \let\presection=\section
 \renewcommand{\section}[1]{\presection*{#1}\vspace{-1.5ex}%
-\noindent\rule{\textwidth}{1pt}\vspace*{-.5ex}} 
+\noindent\rule{\textwidth}{1pt}\vspace*{-.5ex}}
 
 \newcommand{\entrylabel}[1]{\mbox{#1}\hfill}
 \newenvironment{CV}[2][1]%
-  {\vspace*{#1\smallskipamount}
-    \begin{list}{}
+{\vspace*{#1\smallskipamount}
+  \begin{list}{}
     {\renewcommand{\makelabel}{\entrylabel}
-    \settowidth{\labelwidth}{1999-1999}
-    \setlength{\leftmargin}{42pt}
-    \vspace*{#2}
-  }}
+      \settowidth{\labelwidth}{1999-1999}
+      \setlength{\leftmargin}{42pt}
+      \vspace*{#2}
+    }}
   {\end{list}
 }
 
-\newcommand{\specialisation}[1]{\centerline{\Large{\textbf{#1}}}
+\newcommand{\specialisation}[1]{\centerline{\Huge{\textbf{#1}}}
 }

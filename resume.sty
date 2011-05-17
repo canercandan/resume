@@ -8,6 +8,9 @@
 % Authors:
 % Caner Candan <caner@candan.fr>, http://caner.candan.fr
 
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{resume}
+
 % for multilanguages support
 \newif\if@en            \@enfalse
 \newif\if@fr            \@frfalse
@@ -38,11 +41,6 @@
 
 \ProcessOptions
 
-% margin setter
-\RequirePackage[a4paper]{geometry}
-\geometry{top=0.8in, bottom=0.8in, left=0.8in, right=0.8in}
-% end margin setter
-
 \if@french
 \RequirePackage[francais]{babel}
 \fi
@@ -65,35 +63,24 @@
 \RequirePackage{dot2texi}
 \fi
 
+% cvsty inclusion
+\RequirePackage{tabularx}
+\RequirePackage{ae}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{CV}
+
 % multilanguages support
 \newcommand{\lang}[2]
-{
-  \if@en #1 \fi
-  \if@fr #2 \fi
+{%
+  \if@en#1\fi%
+  \if@fr#2\fi%
 }
 
 % multicontexts support
 \newcommand{\context}[2]
-{
-  \if@sci #1 \fi
-  \if@eng #2 \fi
+{%
+  \if@sci#1\fi%
+  \if@eng#2\fi%
 }
-
-%\ecvNoHorRule
-%\ecvExtraRowHeight{10px}
-
-%\ecvbeforepicture{\raggedright} % draw picture at the top of resume
-
-% draw picture at the left
-\ecvbeforepicture{\raggedleft}
-\ecvafterpicture{\ecvspace{-3.5cm}}
-% end draw picture at the left
-
-\ecvpicture[height=3cm]{images/candan_c.png}
-
-\newcommand{\myecvitemsep}[1]           {\ecvitem[10pt]{\textit{#1}}}
-\newcommand{\myecvitem}[1]              {\ecvitem{\textit{#1}}}
-\newcommand{\myecvsubsection}[1]        {\ecvitem{\textit{\textbf{#1}}}}
-\newcommand{\myecvtext}[1]              {\ecvitem{}{\\&\textit{#1}}}
 
 \endinput
