@@ -31,19 +31,24 @@ website: \url{http://caner.candan.fr}\\
 
 \specialisation{\lang{Student researcher in computer science}{Etudiant chercheur en informatique}}
 
+\bigskip
+
 % Research fields
-\section{\lang{Research fields}{Domaine de recherche}}
+%\section{\lang{Research fields}{Domaine de recherche}}
 
 {\it
 \lang{Parallelization and programmation models}{Parallélisation et modèles de programmation},
 %\lang{decision science}{aide à la décision},
-\lang{stochastic process}{systèmes stochastiques},
+\lang{stochastic optimization algorithms}{algorithmes d'optimisation stochastique},
 \lang{artificial intelligence}{intelligence artificielle},
 \lang{optimization}{optimisation},
 \lang{meta-heuristics}{métaheuristiques},
-\lang{experimental analysis}{analyse expérimentale}.
+\lang{experimental analysis}{analyse expérimentale},
+\lang{careful programming approach}{approche de programmation soigneuse}.
 %\lang{operations research}{recherche opérationnelle}
 }
+
+\bigskip
 
 % DAE
 \lang{%
@@ -69,9 +74,9 @@ website: \url{http://caner.candan.fr}\\
 
 % Publications
 \lang{%
-  {\bf Publications summary:} An article in an international congress and an article in a national congress. A conference in a national congress. List of publications available at%
+  {\bf Publications summary:} An article in an international congress and an article in a national congress. List of publications available at%
 }{
-  {\bf Bilan des publications:} Un article dans un congrès internationale et un article dans un congrès nationale. Une conférence dans un congrès national. Liste des publications disponible sur le web:%
+  {\bf Bilan des publications:} Un article dans un congrès internationale et un article dans un congrès nationale. Liste des publications disponible sur le web:%
 }
 \url{http://caner.candan.fr/publications}
 
@@ -86,12 +91,12 @@ website: \url{http://caner.candan.fr}\\
     {\bf Part-time job and MSc's internship,}
     THALES Research \& Technology, decision technologies and mathematics laboratory.
 
-    {\it Parallelization of a planning algorithm using EO framework on a 48-core machine, experiments showed significant speedups with an increasing number of cores. Hybridation of EDA \& SA. Implementation of an automated parameter setting interface.}%
+    {\it Parallelization of a planning algorithm using EO framework. Hybridation of EDA \& SA. Implementation of an automated parameter setting interface.}%
   }{%
     {\bf Travail à mi-temps et stage de Master,}
     Centre de recherche THALES, laboratoire mathématiques et techniques de la décision.
 
-    {\it Parallélisation d'un algorithme de planification utilisant le framework EO sur une machine à 48 coeurs, les expériences ont montrées des accélérations sinificatives en fonction du nombre de coeurs. Hybridation de EDA-SA. Implémentation d'une interface de paramétrage automatique.}%
+    {\it Parallélisation d'un algorithme de planification utilisant le framework EO. Hybridation de EDA-SA. Implémentation d'une interface de paramétrage automatique.}%
   }%
 
 % January - August 2009
@@ -160,9 +165,9 @@ website: \url{http://caner.candan.fr}\\
 
 \item[2011]
   \lang{%
-    {\bf Implementation} of a parallelization module in the framework EO ``Evolving Objects'' in C++, using OpenMP. Scalability issues in variation and replacement operators due mainly to memory allocations not under control. Works with larger population sizes. Available at \url{http://eo.sf.net}
+    {\bf Implementation} of a parallelization module in the framework EO ``Evolving Objects'' in C++, using OpenMP. Scalability issues in variation and replacement operators due mainly to memory allocations not under control. Works with larger population sizes. Experiments, on a 48-core machine, showed significant speedups with an increasing number of cores. Available at \url{http://eodev.sf.net} (Published at GECCO 2011)
   }{%
-    {\bf Implémentation} d'un module de parallélisation dans le framework EO ``Evolving Objects'' en C++, utilisant OpenMP. Problèmes de passage à l'échelle dans les opérateurs de variation et remplacement due principalement aux allocations mémoires non maîtrisés. Fonctionne avec des tailles de population plus grandes. Disponible sur le web: \url{http://eo.sf.net}
+    {\bf Implémentation} d'un module de parallélisation dans le framework EO ``Evolving Objects'' en C++, utilisant OpenMP. Problèmes de passage à l'échelle dans les opérateurs de variation et remplacement due principalement aux allocations mémoires non maîtrisés. Fonctionne avec des tailles de population plus grandes. Les expériences, sur une machine à 48 coeurs, ont montrées des accélérations sinificatives en fonction du nombre de coeurs. Disponible sur le web: \url{http://eodev.sf.net} (Publication à GECCO 2011).
   }%
 
 \item[2011]
@@ -174,16 +179,16 @@ website: \url{http://caner.candan.fr}\\
 
 \item[2010]
   \lang{%
-    {\bf Conception} and implementation of the EDO framework, for the design of the original hybridation of estimation of distribution algorithm and simulated annealing. Available at \url{http://eodev.sf.net}
+    {\bf Conception} and implementation of the EDO framework, for the design of estimation of distribution algorithms. Used along with ParadisEO-MO to implement an original hybridation of multi-variate gaussian EDA with simulated annealing. Available at \url{http://eodev.sf.net} (Published at ROADEF 2011)
   }{%
-    {\bf Conception} et implémentation du framework EDO, pour le design de l'hybridation originale de l'algorithme à estimation de distribution et de recuit simulé. Disponible sur le web: \url{http://eodev.sf.net}
+    {\bf Conception} et implémentation du framework EDO, pour le design d'algorithmes à estimation de distribution. Utilisé avec ParadisEO-MO pour implémenter une hybridation originale de gaussienne multi-variante EDA avec un recuit simulé. Disponible sur le web: \url{http://eodev.sf.net} (Publication à ROADEF 2011)
   }%
 
 \item[2009]
   \lang{%
-    {\bf Implementation} of an automated parameter setting method, using ParadisEO framework.
+    {\bf Implementation} of a multi-objective parameter setting and behaviour extraction method, using ParadisEO framework.
   }{%
-    {\bf Implémentation} d'une interface de paramétrage automatique.
+    {\bf Implémentation} d'une méthode de paramétrage multi-objectif et d'extraction de comportements utilisant le framework ParadisEO.
   }%
   \url{http://paradiseo.gforge.inria.fr}
 
@@ -195,7 +200,14 @@ website: \url{http://caner.candan.fr}\\
 
 \item
   \textbf{\lang{Technical tools}{Outils techniques}:}
-  *BSD, GNU/Linux, Solari - Assembler X86, C99, C++, Objective-C, J2EE - Lex, Yacc, Codeworker - PHP, Perl, ASP, JavaScript/Ajax, Ruby, Python, Xslt - CUDA, MPI, OpenMP - GNU Octave, Scilab, Gnuplot - Subversion, Git - Oracle, DB2, PostgreSQL, MySQL, SQLite.
+  *BSD, GNU/Linux, Solaris —
+  Assembler X86, C99, C++, Objective-C, J2EE —
+  Lex, Yacc, Codeworker —
+  PHP, Perl, ASP, JavaScript/Ajax, Ruby, Python, Xslt —
+  CUDA, MPI, OpenMP —
+  GNU Octave, Scilab, Gnuplot —
+  Subversion, Git —
+  Oracle, DB2, PostgreSQL, MySQL, SQLite.
 
 \end{CV}
 
